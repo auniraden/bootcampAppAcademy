@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User Form</title>
+</head>
+<body>
+    <!-- Phase 1: Creating the Form -->
+    <form action="#" method="post">
+        <fieldset> <!--Used to group several controls and labels within form-->
+            <legend>Add user</legend> <!--caption of the content-->
+
+            <!-- Phase 2: Basic Information -->
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <!-- Phase 3: Drop Down Menu -->
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="guest">Guest</option>
+            </select><br>
+
+            <!-- Phase 4: Radio Buttons -->
+            <p>Choose your favorite programming language:</p>
+            <label><input type="radio" name="favorite-language" value="html"> HTML</label><br>
+            <label><input type="radio" name="favorite-language" value="css"> CSS</label><br>
+            <label><input type="radio" name="favorite-language" value="javascript"> JavaScript</label><br>
+
+            <!-- Phase 5: Additional Information -->
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+
+            <label for="current-date">Current Date:</label>
+            <input type="date" id="current-date" name="current-date"><br>
+
+            <!-- Phase 6: Submission -->
+            <label><input type="checkbox" name="newsletter-signup"> Sign up for newsletter</label><br>
+            <label><input type="checkbox" name="terms-agreement"> Agree to terms and conditions</label><br>
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>
