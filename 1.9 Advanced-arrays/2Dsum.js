@@ -3,7 +3,7 @@ let twoDimensionalSum = function(arr){
 
     for(let i = 0; i < arr.length; i++){
         let subArray = arr[i];
-        for(let j = 0; j < subArray.length; j = j + 1){
+        for(let j = 0; j < subArray.length; j++){
             sum = sum + subArray[j];
         }
     }
