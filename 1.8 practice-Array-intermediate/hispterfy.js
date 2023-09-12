@@ -21,7 +21,7 @@ let hipsterfy = function(sentence) {
     }
 
     return newWords.join(' ');
-};
+}
 
 console.log(hipsterfy('When should everyone wake up?')); // 'Whn shold everyon wak p?'
 console.log(hipsterfy('get ready for our bootcamp')); // 'gt redy fr or bootcmp'

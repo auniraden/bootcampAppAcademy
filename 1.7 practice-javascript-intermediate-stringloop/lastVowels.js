@@ -9,7 +9,7 @@ let lastVowel = function(str) {
     }
 
     return null;
-};
+}
 
 console.log(lastVowel('battery')); // 'e'
 console.log(lastVowel('TUNNEL')); // 'E'
