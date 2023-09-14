@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const hipsterfy = require('../problems/16-hipsterfy');
+const hipsterfy = require('../problems/16-hipsterfy__');
 
 describe('hipsterfy()', function () {
   it('should return the string with the last vowel of every word removed', function () {

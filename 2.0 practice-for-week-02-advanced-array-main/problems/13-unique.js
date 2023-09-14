@@ -15,7 +15,12 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 */
 
 let unique = function(array) {
-    // Your code here
+    let uniqueArr = array.filter(function(el, index, selfArray){
+        //check if the element is the same as any other element by comparing with index, if same means, it's unique.
+        return selfArray.indexOf(el) === index;
+    });
+
+    return uniqueArr;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
@@ -24,4 +29,4 @@ try {
     module.exports = unique;
 } catch (e) {
     module.exports = null;
-}
+}

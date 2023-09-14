@@ -13,8 +13,17 @@ console.log(sumWithReduce([])); // 0
 */
 
 let sumWithReduce = function(nums) {
-  // Your code here
-};
+  if(!Array.isArray(nums)){
+    return 0;
+  }
+  else{
+    return nums.reduce(function(accum,element){
+      return accum + element;
+    },0);
+  }
+
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

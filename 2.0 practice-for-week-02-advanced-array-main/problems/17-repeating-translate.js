@@ -28,14 +28,45 @@ console.log(repeatingTranslate("her family flew to France"));   // "herer family
 
 */
 
-let repeatingTranslate = function(sentence) {
-    // Your code here
-};
-
-
+let isVowel = function (char) {
+    const vowels = 'aeiouAEIOU'; // Include both lowercase and uppercase vowels
+    return vowels.includes(char);
+}
 let translateWord = function(word) {
-    // Your code here
+    if (word.length < 3) {
+        return word;
+      }
+
+      const lastChar = word[word.length - 1];
+      const lastVowelIndex = word.split('').findLastIndex(isVowel);
+
+      if (lastVowelIndex === -1 || !isVowel(lastChar)) {
+        // If the word doesn't end with a vowel or has no vowels, repeat the word
+        return word + word;
+      } else {
+        // If the word ends with a vowel, repeat the word once
+        return word + word.slice(lastVowelIndex + 1);
+      }
 };
+
+let repeatingTranslate = function(sentence) {
+    const words = sentence.split(' ');
+
+    const translatedWords = words.map(function (word) {
+    let translatedWord = translateWord(word);
+
+    // Preserve capitalization
+    if (word[0] === word[0].toUpperCase()) {
+      translatedWord = translatedWord.charAt(0).toUpperCase() + translatedWord.slice(1);
+    }
+
+    return translatedWord;
+  });
+
+  return translatedWords.join(' ');
+};
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -43,4 +74,4 @@ try {
     module.exports = repeatingTranslate;
 } catch (e) {
     module.exports = null;
-}
+}
