@@ -12,19 +12,19 @@ return `Recycle Me!`
 
 */
 
-
 function shouldRecycle(item) {
-  if (!item.plastic) {
-    return 'Recycle Me!'
-  } else if (item.color === 'black') {
-    return 'Currently, cannot be recycled.'
-  } else if (item.aluminum) {
-    return 'Recycle Me!'
-  } else if (item.paper) {
-    return 'Recycle Me!'
+
+  if (item.color === 'black' && item.plastic) {
+    return 'Currently, cannot be recycled.';
   }
-  return 'Cannot be recycled'
+  else if (item.plastic || item.aluminum || item.paper) {
+    return 'Recycle Me!';
+  }
+  else {
+    return 'Cannot be recycled.';
+  }
 }
+
 
 
 const waterBottle = {
