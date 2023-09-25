@@ -11,7 +11,11 @@ getFullName(p2); // => 'Charlie Brown'
 ***********************************************************************/
 
 function getFullName(person) {
-  // Your code here
+  if ('firstName' in person && 'lastName' in person) {
+    return person.firstName + ' ' + person.lastName;
+  } else {
+    return 'Full name not provided';
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
