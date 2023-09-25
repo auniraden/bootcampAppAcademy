@@ -36,7 +36,17 @@ console.log(alternatingMap(['hEy', 'EVERYone', 'whats', 'uP??'], yell, whisper))
 *******************************************************************************/
 
 
-let alternatingMap = function() {
+let alternatingMap = function(arr, cb1, cb2) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        let ele = arr[i];
+        if (i % 2 === 0) {
+            newArr.push(cb1(ele));
+        } else {
+            newArr.push(cb2(ele));
+        }
+    }
+    return newArr;
 
 };
 
