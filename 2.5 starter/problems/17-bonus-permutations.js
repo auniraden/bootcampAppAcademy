@@ -12,7 +12,22 @@ permutations([1, 2, 3]) // [[1, 2, 3], [1, 3, 2],
                         // [3, 1, 2], [3, 2, 1]]
 ***********************************************************************/
 
-// your code here
+function permutations(array) {
+
+  if (!array[0]){
+    return [[]];
+  }
+  let first = array[0];
+  let perms = permutations(array.slice(1));
+  let newPerms = [];
+  for (let i = 0; i < perms.length; i++){
+    for (let j = 0; j <= perms[i].length; j++){
+      let newPerm = perms[i].slice(0, j).concat([first]).concat(perms[i].slice(j));
+      newPerms.push(newPerm);
+    }
+  }
+  return newPerms;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

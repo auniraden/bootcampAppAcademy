@@ -11,7 +11,20 @@ range(7, 6); // []
 ***********************************************************************/
 
 
-// your code here
+function range (num1, num2){
+  if (num2 < num1){
+    return [];
+  }
+  if (num1 === num2){
+    return [];
+  }
+  let arr = [];
+  arr.push(num1);
+  let i = num1 + 1;
+  let result = range(i, num2);
+
+  return arr.concat(result);
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

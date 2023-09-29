@@ -64,7 +64,16 @@ The call above should return the tree below:
 ***********************************************************************/
 
 const makeTree = (categories, parent) => {
-  // your code here
+  let tree = {};
+
+  for (let i = 0; i < categories.length; i++) {
+    let category = categories[i];
+    if (category.parent === parent) {
+      tree[category.id] = makeTree(categories, category.id);
+    }
+  }
+
+  return tree;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

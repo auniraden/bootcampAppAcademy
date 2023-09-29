@@ -22,7 +22,15 @@ sort([]); // []
 ***********************************************************************/
 
 function sort(nums, sorted = []) {
-  // your code here
+  if (nums.length === 0){
+    return sorted;
+  }
+  else{
+    let min = Math.min(...nums);
+    sorted.push(min);
+    nums.splice(nums.indexOf(min), 1);
+    return sort(nums, sorted);
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
