@@ -1,7 +1,9 @@
+// Export helloMessage from messages/hello-message.js and import it into messages/say-message.js. If you run the messages/say-message.js file
 
+const helloMessage = require('./hello-message.js');
 
-function sayMessage(message) {
-  console.log(`"${message}"`)
+function sayMessage() {
+  console.log(helloMessage);
 }
 
-sayMessage(helloMessage);
+module.exports = sayMessage;
