@@ -25,7 +25,7 @@ let ties = 0;
 
 /***************************** HELPER FUNCTIONS ******************************/
 function printHelp() {
-  // Your code here
+
 }
 
 function getWinner(move1, move2) {
