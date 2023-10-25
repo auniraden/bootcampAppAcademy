@@ -36,19 +36,19 @@ describe("The all-dragons.js module file", () => {
         ],
         "Bastian"
       );
-  
+
       it("should be an instance of the `FriendlyDragon` class", () => {
         expect(solution.falkor).to.be.an.instanceof(FriendlyDragon);
       });
-  
+
       it("should have the `name` property be set to `Falkor`", () => {
         expect(solution.falkor.name).to.equal(testFalkor.name);
       });
-  
+
       it("should have the `color` property be set to `White`", () => {
         expect(solution.falkor.color).to.equal(testFalkor.color);
       });
-  
+
       it("should have the `lifeGoals` property be set correctly for each value", () => {
         expect(solution.falkor.lifeGoals[0]).to.equal(
           testFalkor.lifeGoals[0]
@@ -60,7 +60,7 @@ describe("The all-dragons.js module file", () => {
           testFalkor.lifeGoals[2]
         );
       });
-  
+
       it("should have the `friend` property be set to `Bastian`", () => {
         expect(solution.falkor.friend).to.equal(testFalkor.friend);
       });
@@ -78,19 +78,19 @@ describe("The all-dragons.js module file", () => {
         ],
         "Dwarf King"
       );
-  
+
       it("should be an instance of the `EvilDragon` class", () => {
         expect(solution.smaug).to.be.an.instanceof(EvilDragon);
       });
-  
-      it("should have the `name` property be set to `Falkor`", () => {
+
+      it("should have the `name` property be set to `Smaug`", () => {
         expect(solution.smaug.name).to.equal(testSmaug.name);
       });
-  
+
       it("should have the `color` property be set to `Black`", () => {
         expect(solution.smaug.color).to.equal(testSmaug.color);
       });
-  
+
       it("should have the `evilDoings` property be set correctly for each value", () => {
         expect(solution.smaug.evilDoings[0]).to.equal(
           testSmaug.evilDoings[0]
@@ -102,17 +102,17 @@ describe("The all-dragons.js module file", () => {
           testSmaug.evilDoings[2]
         );
       });
-  
+
       it("should have the `nemesis` property be set to `Dwarf King`", () => {
         expect(solution.smaug.nemesis).to.equal(testSmaug.nemesis);
       });
     });
   }
-  
+
   describe("allDragons", () => {
     it("returns the expected value", () => {
       const dragons = solution.allDragons;
-  
+
       expect(dragons.length).to.equal(2);
       expect(dragons).to.deep.include(solution.falkor.name);
       expect(dragons).to.deep.include(solution.smaug.name);
