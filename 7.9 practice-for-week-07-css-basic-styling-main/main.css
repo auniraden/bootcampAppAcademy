@@ -1,0 +1,43 @@
+h1 {
+    font-size: 100 em;
+    font-family: 'Caveat', cursive;
+    font-family: 'Playpen Sans', cursive;
+    padding: 0;
+    margin: 0;
+    font-weight: 0;
+    text-decoration: 0;
+    color: #76504e;
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 80 em;
+    font-family: 'Caveat', cursive;
+    font-family: 'Playpen Sans', cursive;
+    padding: 0.75 em;
+    margin: auto;
+    font-style: italic;
+    color: hotpink;
+
+}
+
+p {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 1.5em; /* Removed the space between the value and "em" */
+    padding: 0.75em; /* Removed the space between the value and "em" */
+    margin: 0 auto; /* Set margin to 0 on the top and bottom, and auto on left and right */
+    color: #76504e;
+    text-align: center;
+}
+
+.logo {
+    background-size: cover;
+    background-color: transparent; /* Use 'transparent' to make the background transparent */
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: flex-end; /* Align the content to the bottom */
+    padding: 0.75em;
+}
