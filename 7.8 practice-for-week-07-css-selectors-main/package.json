@@ -1,0 +1,14 @@
+{
+    "name": "css-selectors",
+    "private": true,
+    "version": "1.0.0",
+    "description": "CSS Selectors Guided Practice",
+    "scripts": {
+        "test": "cypress run --spec 'cypress/integration/test.spec.js'"
+    },
+    "devDependencies": {
+        "cypress": "^13.4.0"
+    },
+    "author": "curriculum@appacademy.io",
+    "license": "ISC"
+}
