@@ -1,0 +1,15 @@
+body{
+    font-family: 'Edu TAS Beginner', 'cursive';
+}
+.upper__left{
+    height:30px;
+    width:30px;
+    margin-left: 50px;
+}
+
+.upper__right{
+    display: inline-block;
+    position: fixed;
+    right: 60px;
+    top: 20px;
+}
