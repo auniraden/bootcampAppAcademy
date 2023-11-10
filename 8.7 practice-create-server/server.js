@@ -19,3 +19,29 @@ const server = http.createServer((req, res) => {
   const server = http.createServer((req, res) => {
     console.log(res);
   });
+
+//how to set status code:
+const server = http.createServer((req, res) => {
+    res.statusCode = 500;
+  });
+
+  //set header:
+  const server = http.createServer((req, res) => {
+    res.setHeader("Content-Type", "text/css");
+  });
+
+  //write response body:
+  const server = http.createServer((req, res) => {
+    res.write('Hello');
+    res.write(' ');
+    res.write('World');
+    res.write('!');
+  });
+
+  //send the response:
+  const server = http.createServer((req, res) => {
+    res.write('Hello');
+    res.write(' ');
+    res.write('World');
+    res.end('!');
+  });
